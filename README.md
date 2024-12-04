@@ -145,6 +145,9 @@ If you don't use MollySocket behind a reverse proxy, you wish to use it in air-g
 - If you can't use port-forwarding, change `webserver` to `false` in your config file, or via the environment variable `MOLLY_WEBSERVER=false` and restart your service:
 
 ```console
+# If you use docker compose
+docker compose run mollysocket qr airgapped
+# else
 # systemctl restart mollysocket
 # journalctl -u mollysocket
 # # This should show a QR code
